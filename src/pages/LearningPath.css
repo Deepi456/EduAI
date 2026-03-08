@@ -1,0 +1,218 @@
+.path-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.path-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.path-header h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.path-header p {
+    color: var(--color-text-muted);
+}
+
+.path-stats {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    border-radius: var(--radius-xl);
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.stat-val {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary-light);
+}
+
+/* Timeline Layout */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    padding-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-connector {
+    position: relative;
+    width: 40px;
+    /* matches icon size area */
+    display: flex;
+    justify-content: center;
+}
+
+.timeline-connector .line {
+    position: absolute;
+    top: 40px;
+    bottom: -20px;
+    width: 2px;
+    background: var(--border-color);
+}
+
+.timeline-item.completed .line {
+    background: var(--color-primary);
+    /* connecting past line */
+}
+
+.timeline-item.active .line {
+    background: linear-gradient(180deg, var(--color-primary) 0%, var(--border-color) 100%);
+}
+
+.timeline-node {
+    position: relative;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-completed {
+    color: var(--color-accent);
+}
+
+.icon-active {
+    color: var(--color-primary-light);
+    filter: drop-shadow(0 0 8px rgba(129, 140, 248, 0.5));
+}
+
+.icon-locked {
+    color: var(--color-text-muted);
+}
+
+.timeline-content {
+    flex: 1;
+    padding: 1.5rem;
+    transition: transform var(--transition-fast);
+    position: relative;
+}
+
+.timeline-item.active .timeline-content {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.15);
+}
+
+.timeline-item.active .timeline-content:hover {
+    transform: translateX(5px);
+}
+
+.timeline-item.locked .timeline-content {
+    opacity: 0.6;
+}
+
+.recommended-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: linear-gradient(135deg, #F59E0B, #FCD34D);
+    color: #78350F;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    box-shadow: var(--shadow-sm);
+    z-index: 5;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.content-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.type-badge {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-sm);
+    background: var(--color-bg-surface);
+    font-weight: 600;
+}
+
+.type-badge.video {
+    color: #60A5FA;
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.type-badge.interactive {
+    color: #A78BFA;
+    background: rgba(139, 92, 246, 0.1);
+}
+
+.type-badge.exercise {
+    color: #34D399;
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.type-badge.reading {
+    color: #F87171;
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.timeline-content p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.duration {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+}
